@@ -4,9 +4,11 @@ const variants = {
   primary:
     "bg-brand-red text-white shadow-glow hover:-translate-y-0.5 hover:bg-red-600",
   secondary:
-    "border border-white/18 bg-white/10 text-white hover:-translate-y-0.5 hover:bg-white/15",
+    "border border-white/18 bg-white/10 text-white hover:-translate-y-0.5 hover:border-brand-red/50 hover:bg-white/15",
   light:
-    "border border-black/10 bg-white text-brand-ink hover:-translate-y-0.5 hover:border-brand-red/30 hover:text-brand-red",
+    "border border-white/10 bg-brand-panel2 text-white hover:-translate-y-0.5 hover:border-brand-red/50 hover:text-brand-red",
+  ghost:
+    "text-white hover:-translate-y-0.5 hover:bg-white/10",
 };
 
 export default function ButtonLink({
@@ -16,7 +18,7 @@ export default function ButtonLink({
   variant = "primary",
   external = false,
 }) {
-  const classes = `focus-ring inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold transition active:scale-95 ${variants[variant]} ${className}`;
+  const classes = `focus-ring inline-flex min-h-12 items-center justify-center rounded-full px-5 py-3 text-center text-sm font-bold transition active:scale-95 ${variants[variant]} ${className}`;
 
   if (external) {
     return (

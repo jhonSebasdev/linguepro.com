@@ -1,4 +1,6 @@
 import "./globals.css";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "LinguePro | Academia online",
@@ -9,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

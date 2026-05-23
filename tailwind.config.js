@@ -10,13 +10,16 @@ module.exports = {
       colors: {
         brand: {
           red: "#ef1b16",
-          dark: "#08090d",
-          ink: "#111216",
-          muted: "#6f7787",
+          dark: "#070a12",
+          panel: "#0d1324",
+          panel2: "#111a2e",
+          ink: "#f8fafc",
+          muted: "#9aa7bd",
         },
       },
       boxShadow: {
-        glow: "0 22px 80px rgba(239, 27, 22, 0.22)",
+        glow: "0 22px 80px rgba(239, 27, 22, 0.24)",
+        card: "0 18px 60px rgba(0, 0, 0, 0.28)",
       },
       backgroundImage: {
         "grid-dark":

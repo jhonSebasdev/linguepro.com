@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
@@ -13,23 +13,45 @@
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #111216;
+  background: #070a12;
+  color: #f8fafc;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: rgba(239, 27, 22, 0.22);
+  background: rgba(239, 27, 22, 0.28);
 }
 
 .section-shell {
-  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
 .eyebrow {
-  @apply text-sm font-bold uppercase tracking-[0.18em] text-brand-red;
+  @apply text-xs font-bold uppercase tracking-[0.16em] text-brand-red sm:text-sm sm:tracking-[0.18em];
 }
 
 .focus-ring {
   @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-red;
+}
+
+.platform-section {
+  @apply bg-brand-dark py-14 text-white sm:py-20 lg:py-24;
+}
+
+.platform-card {
+  @apply rounded-2xl border border-white/10 bg-brand-panel shadow-card backdrop-blur transition;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.float-soft {
+  animation: float-soft 5.5s ease-in-out infinite;
 }
