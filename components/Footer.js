@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Music2 } from "lucide-react";
 import { campusUrl, schools } from "@/data/courses";
 import ButtonLink from "./ButtonLink";
 
@@ -9,6 +9,12 @@ const columns = [
   ["Comunidad", [["Blog", "/blog"], ["Clases en vivo", "/live"], ["Testimonios", "/#testimonios"], ["Contacto", "/contacto"]]],
   ["Soporte", [["Precios", "/precios"], ["Agendar demo", "/contacto"], ["Campus virtual", campusUrl], ["Preguntas frecuentes", "/precios#faq"]]],
   ["Legal", [["Privacidad", "#"], ["Terminos", "#"], ["Cookies", "#"], ["Accesibilidad", "#"]]],
+];
+
+const socialLinks = [
+  ["Facebook", "https://www.facebook.com/share/14eVhnKQ8Dy/?mibextid=wwXIfr", Facebook],
+  ["Instagram", "https://www.instagram.com/lingue_senasespec?igsh=MWQ4eHdzdTQ4YzRmZw==", Instagram],
+  ["TikTok", "https://www.tiktok.com/@lingue_ec?_r=1&_t=ZS-974b5m2Q005", Music2],
 ];
 
 export default function Footer() {
@@ -57,11 +63,13 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-3">
-            {[Facebook, Instagram, Linkedin, Youtube].map((Icon, index) => (
+            {socialLinks.map(([label, href, Icon]) => (
               <a
-                key={index}
-                href="#"
-                aria-label="Red social LinguePro"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
                 className="focus-ring flex h-10 w-10 items-center justify-center rounded-full border border-white/12 text-white/72 hover:border-brand-red hover:text-brand-red"
               >
                 <Icon size={18} />
