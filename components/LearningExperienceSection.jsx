@@ -15,7 +15,7 @@ const benefits = [
   ["Clases practicas y guiadas", PlayCircle],
   ["Campus virtual disponible 24/7", Clock3],
   ["Cursos de idiomas y habilidades profesionales", Languages],
-  ["Educacion inclusiva con lengua de senas", CheckCircle2],
+  ["Educacion inclusiva con lengua de señas", CheckCircle2],
   ["Actividades, tareas y evaluaciones", ClipboardList],
   ["Certificados al completar tus cursos", Award],
   ["Acceso desde celular, tablet o computadora", MonitorSmartphone],

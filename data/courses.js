@@ -102,7 +102,7 @@ export const courses = [
     tag: "Speaking",
   },
   {
-    title: "Lengua de Senas",
+    title: "Lengua de Señas",
     category: "habilidades",
     description: "Aprende comunicacion inclusiva con ejercicios visuales y practicos.",
     duration: "10 semanas",
@@ -238,7 +238,7 @@ export const testimonials = [
   },
   {
     name: "Camila R.",
-    role: "Lengua de Senas",
+    role: "Lengua de Señas",
     quote:
       "El enfoque inclusivo se nota desde el primer modulo. Aprendi con recursos visuales y acompanamiento constante.",
   },
