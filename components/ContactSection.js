@@ -6,6 +6,29 @@ import ButtonLink from "./ButtonLink";
 import SectionHeader from "./SectionHeader";
 
 export default function ContactSection() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const phone = formData.get("phone")?.toString().trim();
+    const program = formData.get("program")?.toString().trim();
+    const message = formData.get("message")?.toString().trim();
+
+    const whatsappMessage = [
+      "Hola LinguePro, quiero recibir informacion.",
+      "",
+      `Nombre: ${name}`,
+      `Correo: ${email}`,
+      `Telefono: ${phone || "No indicado"}`,
+      `Curso de interes: ${program}`,
+      `Mensaje: ${message || "Quiero que me orienten sobre los cursos."}`,
+    ].join("\n");
+
+    window.open(`${whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}`, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <section id="contacto" className="platform-section">
       <div className="section-shell">
@@ -42,15 +65,15 @@ export default function ContactSection() {
             </ButtonLink>
           </aside>
 
-          <form className="platform-card p-5 sm:p-8">
+          <form className="platform-card p-5 sm:p-8" onSubmit={handleSubmit}>
             <div className="grid gap-5 md:grid-cols-2">
               <label className="grid gap-2">
                 <span className="text-sm font-bold text-white">Nombre</span>
-                <input className="focus-ring rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white" type="text" name="name" autoComplete="name" placeholder="Tu nombre" />
+                <input className="focus-ring rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white" type="text" name="name" autoComplete="name" placeholder="Tu nombre" required />
               </label>
               <label className="grid gap-2">
                 <span className="text-sm font-bold text-white">Correo</span>
-                <input className="focus-ring rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white" type="email" name="email" autoComplete="email" placeholder="tu@email.com" />
+                <input className="focus-ring rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white" type="email" name="email" autoComplete="email" placeholder="tu@email.com" required />
               </label>
               <label className="grid gap-2">
                 <span className="text-sm font-bold text-white">Telefono</span>
@@ -58,7 +81,7 @@ export default function ContactSection() {
               </label>
               <label className="grid gap-2">
                 <span className="text-sm font-bold text-white">Curso de interes</span>
-                <select className="focus-ring rounded-xl border border-white/10 bg-[#0b1220] px-4 py-3 text-white" name="program" defaultValue="">
+                <select className="focus-ring rounded-xl border border-white/10 bg-[#0b1220] px-4 py-3 text-white" name="program" defaultValue="" required>
                   <option value="" disabled>Selecciona un curso</option>
                   {courses.map((course) => (
                     <option key={course.title} value={course.title}>{course.title}</option>

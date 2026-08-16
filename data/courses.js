@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const campusUrl = "https://campus.linguepro.com";
-export const whatsappUrl = "https://wa.me/593000000000";
+export const whatsappUrl = "https://wa.me/593981070724";
 
 export const navItems = [
   ["Inicio", "/"],
