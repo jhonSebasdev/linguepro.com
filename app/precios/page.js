@@ -14,10 +14,10 @@ export default function PricingPage() {
         <div className="section-shell">
           <SectionHeader
             eyebrow="Precios"
-            title="Planes para estudiantes, profesionales y equipos"
-            description="Elige acceso individual, acompanamiento avanzado o una solucion empresarial para capacitar a tu equipo."
+            title="Planes de estudio para cada modalidad"
+            description="Elige entre cursos online, clases presenciales o capacitacion para equipos. Todos los planes incluyen orientacion academica y acceso a recursos de aprendizaje."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.name} plan={plan} />
             ))}

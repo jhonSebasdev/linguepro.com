@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata = {
@@ -7,7 +8,9 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="pt-16">
-      <ContactSection />
+      <Suspense>
+        <ContactSection />
+      </Suspense>
     </main>
   );
 }

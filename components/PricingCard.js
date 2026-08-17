@@ -13,7 +13,7 @@ export default function PricingCard({ plan }) {
       <p className="mt-3 text-white/62">{plan.description}</p>
       <div className="mt-6 text-3xl font-black text-white sm:text-4xl">
         {plan.price}
-        {plan.price.startsWith("$") && <span className="text-base font-bold text-white/45"> / mes</span>}
+        {plan.priceLabel && <span className="text-base font-bold text-white/45"> / {plan.priceLabel}</span>}
       </div>
       <div className="mt-6 grid flex-1 gap-3">
         {plan.features.map((feature) => (
@@ -22,8 +22,8 @@ export default function PricingCard({ plan }) {
           </span>
         ))}
       </div>
-      <ButtonLink href="/contacto" className="mt-7">
-        {plan.name === "Empresarial" ? "Agendar demo" : "Comprar plan"}
+      <ButtonLink href={`/contacto?modalidad=${plan.modality}`} className="mt-7">
+        {plan.cta}
       </ButtonLink>
     </article>
   );

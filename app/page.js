@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import BenefitsSection from "@/components/BenefitsSection";
 import BlogCard from "@/components/BlogCard";
 import ContactSection from "@/components/ContactSection";
@@ -66,7 +67,9 @@ export default function Home() {
 
       <Testimonials />
       <CTASection />
-      <ContactSection />
+      <Suspense>
+        <ContactSection />
+      </Suspense>
     </main>
   );
 }

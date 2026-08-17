@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const campusUrl = "https://campus.linguepro.com";
-export const whatsappUrl = "https://wa.me/593981070724";
+export const whatsappUrl = "https://wa.me/593983794142";
 
 export const navItems = [
   ["Inicio", "/"],
@@ -306,29 +306,31 @@ export const blogPosts = [
 
 export const pricingPlans = [
   {
-    name: "Basico",
-    price: "$19",
-    description: "Para empezar con una ruta y acceso al campus.",
-    features: ["1 curso activo", "Materiales grabados", "Evaluaciones basicas", "Soporte por correo"],
+    name: "Curso Online",
+    price: "$60",
+    description: "Aprende desde el campus virtual con materiales, actividades y acompanamiento academico.",
+    features: ["Acceso al campus Moodle", "Materiales digitales", "Actividades y evaluaciones", "Soporte academico", "Certificado digital"],
+    priceLabel: "curso",
+    cta: "Inscribirme online",
+    modality: "online",
   },
   {
-    name: "Pro",
-    price: "$39",
-    description: "Para estudiantes que quieren acompanamiento y clases en vivo.",
-    features: ["3 cursos activos", "Clases live mensuales", "Certificados", "Soporte academico"],
+    name: "Curso Presencial",
+    price: "$80",
+    description: "Estudia en modalidad presencial con clases practicas, guia del instructor y acceso a recursos del curso.",
+    features: ["Clases presenciales", "Instructor en vivo", "Materiales de apoyo", "Practicas guiadas", "Certificado digital"],
+    priceLabel: "curso",
+    cta: "Inscribirme presencial",
+    modality: "presencial",
     highlighted: true,
-  },
-  {
-    name: "Premium",
-    price: "$69",
-    description: "Para avanzar con varias rutas y seguimiento personalizado.",
-    features: ["Cursos ilimitados", "Mentorias grupales", "Prioridad en soporte", "Recursos descargables"],
   },
   {
     name: "Empresarial",
     price: "A medida",
-    description: "Capacitacion para equipos, instituciones y empresas.",
-    features: ["Rutas por equipo", "Reportes de avance", "Onboarding", "Gestion academica"],
+    description: "Capacitacion para equipos, instituciones y empresas segun objetivos, horarios y participantes.",
+    features: ["Rutas por equipo", "Horarios coordinados", "Reportes de avance", "Gestion academica", "Modalidad online o presencial"],
+    cta: "Agendar demo",
+    modality: "empresarial",
   },
 ];
 
